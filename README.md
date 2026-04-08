@@ -1,6 +1,5 @@
 # moda-site
 Модні журнали та історії брендів
-<!DOCTYPE html>
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
