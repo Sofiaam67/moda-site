@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Практична 10</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background-color: #f6f4f2;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Навігація */
+nav {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav li {
+    display: inline;
+}
+
+.login-form {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.login-form input {
+    padding: 5px;
+}
+
+.login-form input[type="submit"] {
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: darkviolet;
+}
+
+/* HERO */
+.hero {
+    height: 320px;
+    background-image: url('https://images.unsplash.com/photo-1504198266285-165a5435c15c?auto=format&fit=crop&w=1300&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    color: white;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+/* Цитата */
+.quote {
+    text-align: center;
+    padding: 40px;
+    font-size: 22px;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Каталог */
+.catalog-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+}
+
+.catalog {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.mag {
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.mag:hover {
+    transform: scale(1.05);
+}
+
+.mag img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.mag h3 {
+    text-align: center;
+    padding: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Коментар */
+.comment-form {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    padding: 8px;
+}
+
+.comment-form button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 8px;
+}
+
+/* Блискітки */
+.sparkle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: sparkleMove linear infinite;
+}
+
+@keyframes sparkleMove {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-500px) scale(0); opacity: 0; }
+}
+
+/* Чорний кружечок (квадратний рух) */
+.circle {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    animation: squareMove 8s linear infinite;
+}
+
+@keyframes squareMove {
+    0%   { top: 20px; left: 20px; transform: scale(1); }
+    25%  { top: 20px; left: 80%; transform: scale(1.5); }
+    50%  { top: 80%; left: 80%; transform: scale(1); }
+    75%  { top: 80%; left: 20px; transform: scale(1.5); }
+    100% { top: 20px; left: 20px; transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li>Головна</li>
+        <li>Галерея</li>
+        <li>Контакти</li>
+    </ul>
+
+    <form class="login-form">
+        <input type="text" placeholder="Логін">
+        <input type="password" placeholder="Пароль">
+        <input type="submit" value="Увійти">
+    </form>
+</nav>
+
+<div class="hero">
+    <h1>Модні Журнали</h1>
+</div>
+
+<div class="quote">
+    “Мода — це мистецтво жити красиво.”
+</div>
+
+<div class="catalog-title">
+    Каталог Vogue & Fashion
+</div>
+
+<div class="catalog">
+    <div class="mag">
+        <img src="https://i.pinimg.com/736x/10/3c/10/103c1064645203a56c9cf5f820f01f28.jpg">
+        <h3>Vogue – Легенда стилю</h3>
+    </div>
+
+    <div class="mag">
+        <img src="https://i.pinimg.com/236x/ec/98/e4/ec98e42ca247bb89995445afb09342ab.jpg">
+        <h3>Fashion Trends 2025</h3>
+    </div>
+
+    <div class="mag">
+        <img src="https://i.pinimg.com/236x/8e/95/0b/8e950b85f0caaeb86bdc531645fff8fa.jpg">
+        <h3>Modern Style Journal</h3>
+    </div>
+</div>
+
+<h2 style="text-align:center;">Залишити коментар</h2>
+
+<form class="comment-form">
+    <input type="text" placeholder="Ваше ім’я">
+    <textarea placeholder="Ваш коментар"></textarea>
+    <button type="submit">Надіслати</button>
+</form>
+
+<div class="circle"></div>
+
+<script>
+for (let i = 0; i < 40; i++) {
+    let s = document.createElement("div");
+    s.className = "sparkle";
+    s.style.left = Math.random() * 100 + "vw";
+    s.style.top = Math.random() * 100 + "vh";
+    s.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
